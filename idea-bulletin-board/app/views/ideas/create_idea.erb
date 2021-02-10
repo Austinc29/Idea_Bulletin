@@ -1,0 +1,8 @@
+<% if flash.has?(:empty_idea) %>
+  <%= flash[:empty_idea] %>
+<% end %>
+<form method="POST" action="/ideas">
+  <label>Idea:</label><br>
+  <input type="text" name="content" id="content"><br><br>
+  <input type="submit" value="submit">
+</form>

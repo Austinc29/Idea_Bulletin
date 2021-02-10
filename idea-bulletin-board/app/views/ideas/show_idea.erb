@@ -1,0 +1,8 @@
+<%= @idea.content %>
+<br>
+<br>
+<a href="/ideas/<%= @idea.id %>/edit"><button>Edit Idea</button></a>
+<form method="POST" action="/ideas/<%= @idea.id %>/delete">
+  <input type="submit" value="Delete Idea">
+</form>
+<a href="/ideas"><button>Back to Ideas</button></a>

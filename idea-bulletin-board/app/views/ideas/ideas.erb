@@ -1,0 +1,15 @@
+<% if flash.has?(:wrong_user) %>
+  <%= flash[:wrong_user] %>
+<% end %>
+<% if flash.has?(:wrong_user_edit) %>
+  <%= flash[:wrong_user_edit] %>
+<% end %>
+<p>Welcome, <%= @user.username %></p>
+<h2>Ideas</h2>
+<% @user.ideas.each do |idea| %>
+<ul>
+  <li><a href="/ideas/<%= idea.id %>"><%= idea.content %></a></li>
+</ul>
+<% end %>
+<a href="/ideas/new"><button>New Idea</button></a>
+<a href="/logout"><button>Log Out</button></a>

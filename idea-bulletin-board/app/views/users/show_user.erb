@@ -1,0 +1,6 @@
+<%= @user.username %>'s Ideas
+<% @user.ideas.each do |idea| %>
+<ul>
+  <li><%= idea.content %></li>
+</ul>
+<% end %>
